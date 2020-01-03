@@ -75,10 +75,26 @@ div.board {
   width: 50px !important;
 }
 
+/*Portfolio Images*/
 div.portfolioItem {
     float: left;
     width: 20%; 
-    cursor: -webkit-grab;
+    cursor: pointer;
+	min-width: 100px;
+}
+div.portfolioItem > img {
+	bottom: 2px;
+	right: 2px;
+	border-radius: 20px;
+	padding: 10px;
+	max-width: 100%;
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+}
+div.portfolioItem > img:hover {
+	border-radius: 50%;
 }
 
 div.note:active {
@@ -95,11 +111,6 @@ div.note:hover > span {
     opacity: 1;
 }
 
-div.portfolioItem > img {
-    bottom: 2px;
-    right: 2px;
-}
-
 div.note button {
     margin: 2px;
 }
@@ -113,23 +124,6 @@ div.note > textarea {
 	width: 100%;
 	margin: 0;
 	padding: 0;
-}
-.portfolioItem {
-	min-width: 100px;	
-}
-.portfolioItem img {
-	max-width: 100%;
-	opacity: 0.6;
-	-o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
-}
-.portfolioItem img:hover {
-	border-radius: 50%;
-	max-width: 100%;
-	opacity: 1;
-	border:10px solid rgba(0,0,0,0);
 }
 
 .list ul {
@@ -282,7 +276,6 @@ span.menuList {
 	display: flex;
 	align-items: center;
 	flex-grow:1;
-	background-color: rgba(209,31,63,0.6);
 	padding-right: 30px;
 	height: 50px;
 	font-family: 'Source Sans Pro', sans-serif;
